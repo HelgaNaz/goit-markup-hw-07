@@ -1,0 +1,21 @@
+/* Наши особенности */
+.skills-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+}
+
+.skills-box {
+  width: 270px;
+}
+.skills-picture {
+  display: flex;
+  background-color: #f5f4fa;
+  height: 120px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}

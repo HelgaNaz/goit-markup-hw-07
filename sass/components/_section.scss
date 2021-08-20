@@ -1,0 +1,54 @@
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Сброс данных */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* Оптимизация картинок */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  /* outline: 2px solid red; */
+
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/* Флекс-бокс для всех списков главной, кроме хедера */
+.flex-box {
+  display: flex;
+  padding: 0;
+}
+.flex-box li:not(:last-child) {
+  margin-right: 30px;
+  padding: 0;
+}
+body {
+  background-color: var(--white-color);
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,59 @@
+/* Наша команда */
+.section-team {
+  background-color: var(--secondary-bgc);
+}
+.team-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--title-text-color);
+}
+.team-text {
+  font-size: 16px;
+  line-height: 1.19;
+  margin-top: 10px;
+}
+.team-card {
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-box {
+  padding: 30px 59px 0px;
+}
+
+.flex-social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 16px 32px 30px 32px;
+}
+
+.flex-social-icons li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-links:hover,
+.social-links:focus {
+  background-color: var(--brand-color);
+}
+.social-icons {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-links:hover .social-icons,
+.social-links:focus .social-icons {
+  fill: #ffffff;
+}
