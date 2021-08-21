@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" /> -->
     <link href="./css/main.min.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <!--Панель навигации-->
         <div class="container main-menu">
             <nav class="nav">
-                <a href="./index.html" class="logo">Web<span class="logo-item-black">Studio</span></a>
+                <a href="./index.html" class="logo logo-header">Web<span class="logo logo--black">Studio</span></a>
                 <ul class="site-nav list">
                     <li><a href="./index.html" class="link-nav current">Студия</a></li>
                     <li><a href="./portfolio.html" class="link-nav">Портфолио</a></li>
@@ -43,8 +43,8 @@
         <!--Hero-->
         <section class="section hero">
             <div class="container">
-                <h1 class="hero-title">Эффективные решения<br>для вашего бизнеса</h1>
-                <button type="button" class=" button hero-button" data-modal-open>Заказать услугу</button>
+                <h1 class="hero__title">Эффективные решения<br>для вашего бизнеса</h1>
+                <button type="button" class=" button hero__button" data-modal-open>Заказать услугу</button>
             </div>
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
@@ -109,43 +109,43 @@
             </div>
         </section>
         <!--Наши особенности-->
-        <section class=" section section-skills">
+        <section class="section skills">
             <div class="container">
-                <ul class="list flex-box">
-                        <li class="skills-box">
-                            <div class="skills-picture">
-                                <svg class="skills-icon" width="70" height="70">
+                <ul class="skills__list">
+                        <li class="skills__box">
+                            <div class="skills__picture">
+                                <svg class="skills__icon" width="70" height="70">
                                     <use href="./images/icons.svg#icon-antenna"></use>
                                 </svg>
                             </div>
-                            <h3 class="skills-title">Внимание к деталям</h3>
+                            <h3 class="skills__title">Внимание к деталям</h3>
                             <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                         </li>
-                        <li class="skills-box">
-                            <div class="skills-picture">
-                                <svg class="skills-icon" width="70" height="70">
+                        <li class="skills__box">
+                            <div class="skills__picture">
+                                <svg class="skills__icon" width="70" height="70">
                                     <use href="./images/icons.svg#icon-clock"></use>
                                 </svg>
                             </div>
-                            <h3 class="skills-title">Пунктуальность</h3>
+                            <h3 class="skills__title">Пунктуальность</h3>
                             <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                         </li>
-                        <li class="skills-box">
-                            <div class="skills-picture">
-                                <svg class="skills-icon" width="70" height="70">
+                        <li class="skills__box">
+                            <div class="skills__picture">
+                                <svg class="skills__icon" width="70" height="70">
                                     <use href="./images/icons.svg#icon-diagram"></use>
                                 </svg>
                             </div>
-                            <h3 class="skills-title">Планирование</h3>
+                            <h3 class="skills__title">Планирование</h3>
                             <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                         </li>
-                        <li class="skills-box">
-                            <div class="skills-picture">
-                                <svg class="skills-icon" width="70" height="70">
+                        <li class="skills__box">
+                            <div class="skills__picture">
+                                <svg class="skills__icon" width="70" height="70">
                                     <use href="./images/icons.svg#icon-astronaut"></use>
                                 </svg>
                             </div>
-                            <h3 class="skills-title">Современные технологии</h3>
+                            <h3 class="skills__title">Современные технологии</h3>
                             <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                         </li>
                 </ul>
@@ -401,7 +401,7 @@
     <footer class="footer">
         <div class="container flex-footer">
             <div class="footer-info">
-                <a href="./index.html" class="logo logo-footer">Web<span class="logo-item-white">Studio</span></a>
+                <a href="./index.html" class="logo logo-footer">Web<span class="logo logo--white">Studio</span></a>
                 <address> г. Киев, пр-т Леси Украинки, 26</address>
                 <a href="mailto:info@example.com" class="link-footer">info@example.com</a>
                 <a href="tel:+380991111111" class="link-footer">+38 099 111 11 11</a>

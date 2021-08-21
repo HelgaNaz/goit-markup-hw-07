@@ -5,13 +5,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.logo-item-white {
-  color: var(--white-color);
-}
-a.logo-footer {
-  display: block;
-  padding: 0;
-}
+
 .link-footer {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
@@ -86,9 +80,6 @@ address {
 
 .footer-button {
   margin-left: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .icon-send {
   margin-left: 10px;
