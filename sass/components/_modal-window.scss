@@ -177,9 +177,9 @@
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
-}
-.agreement__icon {
-  opacity: 0;
+  .agreement__icon {
+    opacity: 0;
+  }
 }
 
 .checkbox-hidden:checked + .checkbox-visual {
@@ -187,5 +187,7 @@
   border: 2px solid getColor("accent");
   outline: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  opacity: 1;
+  .agreement__icon {
+    opacity: 1;
+  }
 }

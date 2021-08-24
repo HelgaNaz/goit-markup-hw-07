@@ -21,6 +21,7 @@
   &:hover,
   &:focus {
     border: 1px solid getColor("accent");
+    outline: none;
   }
 
   &:hover .clients__icon,
