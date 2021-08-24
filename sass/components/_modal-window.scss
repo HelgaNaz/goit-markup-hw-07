@@ -23,7 +23,7 @@
 
   min-width: 528px;
   min-height: 581px;
-  background-color: #fff;
+  background-color: getColor("primaryBgc");
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -32,13 +32,12 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button {
+.modal__button {
   margin: 0 auto;
 }
 
 .close-button {
-  display: flex;
-  align-items: center;
+  @include centeredFlex;
   position: absolute;
   cursor: pointer;
   top: 8px;
@@ -47,50 +46,60 @@
   height: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: getColor("primaryBgc");
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover .close-icon,
+  &:focus .close-icon {
+    fill: getColor("accent");
+  }
 }
-.icon-close {
+.close-icon {
   fill: #000000;
 }
-.close-button:hover,
-.close-button:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-.close-button:hover .icon-close,
-.close-button:focus .icon-close {
-  fill: var(--brand-color);
-}
-.modal-form {
+.modal__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 40px;
 }
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  color: var(--title-text-color);
+  color: getColor("titleText");
   margin-bottom: 12px;
 }
-.modal-form ul {
+.modal__list {
   padding: 0;
 }
-.modal-list {
-  list-style: none;
+.modal__item {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-input,
-.modal-textarea {
+.modal__label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+.modal__field {
+  position: relative;
+}
+.modal__input,
+.modal__textarea {
   width: 100%;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -99,80 +108,69 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: var(--primary-text-color);
+  color: getColor("primaryText");
 }
-.modal-input {
+.modal__input {
   height: 40px;
   padding: 0 0 0 40px;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: getColor("accent");
+  }
+  &:hover + .modal__icon,
+  &:focus + .modal__icon {
+    fill: getColor("accent");
+  }
 }
-.modal-textarea {
+.modal__textarea {
   resize: none;
   height: 120px;
   padding: 12px 16px;
   margin-bottom: 0;
-}
-.modal-input:hover,
-.modal-input:focus,
-.modal-textarea:hover,
-.modal-textarea:focus {
-  outline: none;
-  border-color: var(--brand-color);
-}
 
-.modal-textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: getColor("accent");
+  }
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
-.modal-label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  margin-bottom: 4px;
-}
-.modal-agreement {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  position: relative;
-}
-.contract-link {
-  color: var(--brand-color);
-}
-
-.modal-input-field {
-  position: relative;
-}
-.modal-icons {
+.modal__icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
-  fill: #212121;
+  fill: getColor("titleText");
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal-input:focus + .modal-icons,
-.modal-input:hover + .modal-icons {
-  fill: var(--brand-color);
+.agreement {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  position: relative;
 }
+.agreement__text {
+  margin-left: 37px;
+}
+.agreement__link {
+  color: getColor("accent");
+}
+
 .checkbox-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  @extend .visually-hidden;
 }
 .checkbox-visual {
+  @include centeredFlex;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   top: 5px;
   left: 14px;
   width: 16px;
@@ -180,14 +178,14 @@
   border: 2px solid #212121;
   border-radius: 2px;
 }
-
-.checkbox-hidden:checked + .checkbox-visual {
-  background-color: var(--brand-color);
-  border: 2px solid var(--brand-color);
-  outline: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.agreement__icon {
+  opacity: 0;
 }
 
-.checkbox-text {
-  margin-left: 37px;
+.checkbox-hidden:checked + .checkbox-visual {
+  background-color: getColor("accent");
+  border: 2px solid getColor("accent");
+  outline: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 1;
 }

@@ -4,10 +4,11 @@
 
 .skills__box {
   width: 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.skills__list li:not(:last-child) {
-  margin-right: 30px;
-}
+
 .skills__picture {
   @include centeredFlex;
 

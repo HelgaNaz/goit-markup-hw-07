@@ -1,61 +1,63 @@
-/* Footer */
-.footer {
-  background-color: #2f303a;
-  color: var(--white-color);
+.page-footer {
+  background-color: getColor("footerBgc");
+  color: getColor("secondaryText");
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.link-footer {
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  display: block;
-  margin-top: 9px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.page-footer__container {
+  display: flex;
+  align-items: baseline;
 }
-.link-footer:hover,
-.link-footer:focus {
-  color: var(--brand-color);
-}
-address {
+.page-footer__address {
   font-style: normal;
   margin-top: 20px;
 }
-.footer-items {
-  background-color: rgba(255, 255, 255, 0.1);
+.page-footer__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  display: block;
+  margin-top: 9px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: getColor("accent");
+  }
 }
-.footer-icons {
-  fill: #fff;
+.footer-networks {
+  margin-left: 80px;
 }
-.flex-footer-icons {
+.footer-networks__list {
   display: flex;
 }
-.flex-footer-icons li:not(:last-child) {
+.footer-networks__item:not(:last-child) {
   margin-right: 10px;
 }
-.footer-icons-text,
-.footer-label {
+
+.footer-networks__title,
+.footer-form__label {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.footer-social {
-  margin-left: 80px;
+
+.footer-networks__link {
+  background-color: rgba(255, 255, 255, 0.1);
 }
-.flex-footer {
-  display: flex;
-  align-items: baseline;
+.footer-networks__icon {
+  fill: getColor("iconHover");
 }
+
 .footer-form {
   display: flex;
   flex-direction: column;
   margin-left: 93px;
 }
-.footer-field-align {
+.footer-form__field {
   display: inline-flex;
 }
-.footer-input {
+.footer-form__input {
   padding: 0 0 0 16px;
   background-color: transparent;
   font-size: 16px;
@@ -68,19 +70,20 @@ address {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-.footer-input:focus {
-  color: #fff;
-}
-.footer-input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
+
+  &:focus {
+    color: #fff;
+  }
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
-.footer-button {
+.footer-form__button {
   margin-left: 12px;
 }
-.icon-send {
+.footer-form__icon {
   margin-left: 10px;
 }

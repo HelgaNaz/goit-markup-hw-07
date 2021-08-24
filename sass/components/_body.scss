@@ -22,12 +22,4 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-/* Флекс-бокс для всех списков главной, кроме хедера */
-.flex-box {
-  display: flex;
-  padding: 0;
-}
-.flex-box li:not(:last-child) {
-  margin-right: 30px;
-  padding: 0;
-}
+
